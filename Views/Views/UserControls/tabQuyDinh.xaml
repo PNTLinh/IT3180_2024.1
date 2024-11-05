@@ -1,0 +1,67 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuanLyNhaSach.Views.Views.UserControls" x:Class="QuanLyNhaSach.Views.Views.UserControls.tabQuyDinh" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="600" Width="Auto" Height="Auto" Background="White">
+    <DockPanel LastChildFill="True">
+        <Button x:Name="btn_saveRules" BorderThickness="0" Background="#FF4AA6E2" Foreground="{x:Null}" Height="40" FontSize="16" FontWeight="Bold" Margin="0" DockPanel.Dock="Bottom" Style="{DynamicResource Btn_IconOnly}" BorderBrush="{x:Null}" OpacityMask="#FF0080FF" Click="btn_saveRules_Click">
+            <TextBlock Text="Thay đổi qui định" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+        </Button>
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Quy Định :" HorizontalAlignment="Left" Margin="16,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Foreground="#FF71B5E2"/>
+            <Grid Margin="64,0,0,0" Grid.Row="1" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <DockPanel Margin="4">
+                    <TextBlock Text="Quy định : Thay đổi số lượng nhập tối thiếu , lượng tồn tối thiểu để nhập." VerticalAlignment="Top" Margin="4,0" DockPanel.Dock="Top" Foreground="#FF95A5A6" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"/>
+                    <Grid Margin="16,8" DockPanel.Dock="Top">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock TextWrapping="Wrap" Text="Số lượng nhập tối thiểu: " VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#FF95A5A6" Margin="8,0,0,0"/>
+                        <TextBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="8,0,0,0" Grid.Column="1" Width="64" BorderThickness="0,0,0,1" Text="{Binding Rule.Rule.MinNumberWhenImport, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinHeight="0" FlowDirection="RightToLeft" PreviewTextInput="numberOnly"/>
+                        <TextBlock TextWrapping="Wrap" Text="Lượng tồn tối thiểu để nhập: " VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#FF95A5A6" Margin="8,0,0,0" Grid.Row="1"/>
+                        <TextBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="8,0,0,0" Grid.Row="1" Grid.Column="1" Width="64" BorderThickness="0,0,0,1" Text="{Binding Rule.Rule.MinNumberToImport, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinHeight="0" FlowDirection="RightToLeft" PreviewTextInput="numberOnly"/>
+                    </Grid>
+                </DockPanel>
+                <DockPanel Margin="4" Grid.Row="1">
+                    <TextBlock Text="Quy định : Thay đổi tiền nợ tối đa, lượng tồn tối thiếu sau khi bán." VerticalAlignment="Top" Margin="4,0" DockPanel.Dock="Top" Foreground="#FF95A5A6" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"/>
+                    <Grid Margin="16,8" DockPanel.Dock="Top">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock TextWrapping="Wrap" Text="Tiền nợ tối đa: " VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#FF95A5A6" Margin="8,0,0,0"/>
+                        <TextBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="8,0,0,0" Grid.Column="1" Width="64" BorderThickness="0,0,0,1" Text="{Binding Rule.Rule.MaxDebt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinHeight="0" FontFamily="Segoe UI, Lucida Sans Unicode, Verdana" FlowDirection="RightToLeft" PreviewTextInput="numberOnly"/>
+                        <TextBlock TextWrapping="Wrap" Text="Lượng tồn tối thiểu sau khi bán: " VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#FF95A5A6" Margin="8,0,0,0" Grid.Row="1"/>
+                        <TextBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="8,0,0,0" Grid.Row="1" Grid.Column="1" Width="64" BorderThickness="0,0,0,1" Text="{Binding Rule.Rule.MinNumberInStore, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontFamily="Segoe UI" MinHeight="0" FlowDirection="RightToLeft" PreviewTextInput="numberOnly"/>
+                    </Grid>
+                </DockPanel>
+                <CheckBox Content="Quy định : Số tiền thu không vượt quá số tiền khách hàng đang nợ." VerticalAlignment="Top" Margin="4,0,4,32" Foreground="#FF95A5A6" FontWeight="Bold" FontSize="16" Template="{DynamicResource CheckBoxQuyDinh}" BorderBrush="#FF95A5A6" Grid.Row="2" IsChecked="{Binding Rule.Rule.AllowGetMoneyGreaterDebt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked"/>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</UserControl>
