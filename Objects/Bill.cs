@@ -146,7 +146,7 @@ namespace QuanLyNhaSach.Objects
         {
             get
             {
-                return PayMoney.ToString("#,##0 vnđ");
+                return PayMoney.ToString("#,##0 đồng");
             }
         }
         #endregion
