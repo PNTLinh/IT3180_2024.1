@@ -130,7 +130,7 @@ namespace QuanLyNhaSach.Objects
         {
             get
             {
-                return TotalMoney.ToString("#,##0 vnđ");
+                return TotalMoney.ToString("#,##0 đồng");
             }
         }
 
@@ -138,7 +138,7 @@ namespace QuanLyNhaSach.Objects
         {
             get
             {
-                return ReturnMoney.ToString("#,##0 vnđ");
+                return ReturnMoney.ToString("#,##0 đồng");
             }
         }
 
