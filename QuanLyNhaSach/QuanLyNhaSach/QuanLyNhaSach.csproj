@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{704AE2FD-A7D2-4C64-A81B-4E3FC025A8E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyNhaSach</RootNamespace>
+    <AssemblyName>Tiki Bookshop</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ExpressionBlendVersion>12.0.41002.1</ExpressionBlendVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bookstore.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>QuanLyNhaSach.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeReason.Reports, Version=0.5.0.0, Culture=neutral, PublicKeyToken=74fc60a060db7911, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\CodeReason.Reports.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeReason.Reports.Charts.Visifire, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\CodeReason.Reports.Charts.Visifire.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro">
+      <HintPath>..\packages\MahApps.Metro.1.3.0-ALPHA147\lib\net40\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Layout.Toolkit">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.3.0-ALPHA147\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\WPFToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFVisifire.Charts, Version=2.2.5.0, Culture=neutral, PublicKeyToken=99d724542e4db593, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\WPFVisifire.Charts.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Adapters\AuthorAdapter.cs" />
+    <Compile Include="Adapters\BillItemAdapter.cs" />
+    <Compile Include="Adapters\BookAdapter.cs" />
+    <Compile Include="Adapters\BillAdapter.cs" />
+    <Compile Include="Adapters\GenreAdapter.cs" />
+    <Compile Include="Adapters\AddedBookAdapter.cs" />
+    <Compile Include="Adapters\ManagerListAddedBookAdapter.cs" />
+    <Compile Include="Adapters\PayDebtMoneyAdapter.cs" />
+    <Compile Include="Adapters\ReportAdapter.cs" />
+    <Compile Include="Adapters\RuleAdapter.cs" />
+    <Compile Include="Assets\Extensions\CollectionExt.cs" />
+    <Compile Include="Assets\Extensions\Security.cs" />
+    <Compile Include="Assets\Extensions\SqlDataReaderExt.cs" />
+    <Compile Include="Assets\Scripts\AutoUpdate.cs" />
+    <Compile Include="Assets\Scripts\DialogHelper.cs" />
+    <Compile Include="Assets\Scripts\EventClickOut.cs" />
+    <Compile Include="Adapters\AccessLevelAdapter.cs" />
+    <Compile Include="Adapters\AccountAdapter.cs" />
+    <Compile Include="Adapters\CustomerAdapter.cs" />
+    <Compile Include="Adapters\~DataConnector.cs" />
+    <Compile Include="Assets\Scripts\Converters.cs" />
+    <Compile Include="Bus\AppHandler.cs" />
+    <Compile Include="Bus\CheckData.cs" />
+    <Compile Include="Bus\DeleteData.cs" />
+    <Compile Include="Bus\FillData.cs" />
+    <Compile Include="Bus\InsertData.cs" />
+    <Compile Include="Bus\ReportHandler.cs" />
+    <Compile Include="Bus\SaveChanges.cs" />
+    <Compile Include="Bus\SearchData.cs" />
+    <Compile Include="Bus\UpdateData.cs" />
+    <Compile Include="Managers\RuleManager.cs" />
+    <Compile Include="Objects\AccessLevel.cs" />
+    <Compile Include="Objects\Account.cs" />
+    <Compile Include="Objects\Bill.cs" />
+    <Compile Include="Objects\Editable.cs" />
+    <Compile Include="Objects\BillItem.cs" />
+    <Compile Include="Objects\Genre.cs" />
+    <Compile Include="Objects\Author.cs" />
+    <Compile Include="Objects\Function.cs" />
+    <Compile Include="Objects\Book.cs" />
+    <Compile Include="Objects\Customer.cs" />
+    <Compile Include="Errors\ErrorTypes\AppErrors.cs" />
+    <Compile Include="Errors\ErrorTypes\DataErrors.cs" />
+    <Compile Include="Errors\Error.cs" />
+    <Compile Include="Errors\ErrorTypes\LoginErrors.cs" />
+    <Compile Include="Errors\ErrorTypes\QueryErrors.cs" />
+    <Compile Include="Objects\AddedBook.cs" />
+    <Compile Include="Objects\ManagerListAddedBook.cs" />
+    <Compile Include="Objects\PayDebtMoney.cs" />
+    <Compile Include="Objects\Rule.cs" />
+    <Compile Include="Views\Views\UserControls\tabBaoCaoCongNo.xaml.cs">
+      <DependentUpon>tabBaoCaoCongNo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabBaoCaoTonKho.xaml.cs">
+      <DependentUpon>tabBaoCaoTonKho.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabCapNhatTaiKhoan.xaml.cs">
+      <DependentUpon>tabCapNhatTaiKhoan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabQuanLyTaiKhoan.xaml.cs">
+      <DependentUpon>tabQuanLyTaiKhoan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabQuyDinh.xaml.cs">
+      <DependentUpon>tabQuyDinh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabTacGia.xaml.cs">
+      <DependentUpon>tabTacGia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabTaoTaiKhoanMoi.xaml.cs">
+      <DependentUpon>tabTaoTaiKhoanMoi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabTraCuuKhachHang.xaml.cs">
+      <DependentUpon>tabTraCuuKhachHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabTraCuuSach.xaml.cs">
+      <DependentUpon>tabTraCuuSach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabTraCuuTaiKhoan.xaml.cs">
+      <DependentUpon>tabTraCuuTaiKhoan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\Windows\Handlers\About.cs" />
+    <Compile Include="Views\Views\Windows\Handlers\MainWindow.cs" />
+    <Compile Include="Views\Views\UserControls\ListViewItemChiTietHD.xaml.cs">
+      <DependentUpon>ListViewItemChiTietHD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\ListViewItemUserControl.xaml.cs">
+      <DependentUpon>ListViewItemUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\lvi_DSKhachHang.xaml.cs">
+      <DependentUpon>lvi_DSKhachHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabKhachHang.xaml.cs">
+      <DependentUpon>tabKhachHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabPhieuNhapSach.xaml.cs">
+      <DependentUpon>tabPhieuNhapSach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabPhieuThuTien.xaml.cs">
+      <DependentUpon>tabPhieuThuTien.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabQuanLyHoaDonCu.xaml.cs">
+      <DependentUpon>tabQuanLyHoaDonCu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabQuanLyPhieuNhap.xaml.cs">
+      <DependentUpon>tabQuanLyPhieuNhap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabQuanLySach.xaml.cs">
+      <DependentUpon>tabQuanLySach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabTheLoai.xaml.cs">
+      <DependentUpon>tabTheLoai.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\UserControls\tabThemHoaDonMoi.xaml.cs">
+      <DependentUpon>tabThemHoaDonMoi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\Windows\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Scripts\Cursor.cs" />
+    <Compile Include="Assets\Scripts\User32DLL.cs" />
+    <Compile Include="Views\Views\Windows\Handlers\TitleMainRightClick.cs" />
+    <Compile Include="Views\Views\Windows\Handlers\ToolBox.cs" />
+    <Compile Include="Views\Views\Windows\Handlers\WarningBox.cs" />
+    <Compile Include="Views\Views\Windows\Handlers\Login.cs" />
+    <Compile Include="Views\Views\Windows\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\DataManager.cs" />
+    <Compile Include="Managers\UserManager.cs" />
+    <Compile Include="Views\Views\Windows\TitleMainRightClick.xaml.cs">
+      <DependentUpon>TitleMainRightClick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\Windows\ToolBox.xaml.cs">
+      <DependentUpon>ToolBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Views\Windows\WarningBox.xaml.cs">
+      <DependentUpon>WarningBox.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Assets\ReportTemplates\NumberReport\NumberReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\ReportTemplates\DebtorReport\DebtorReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="Views\Styles\CheckBoxTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Styles\ListViewTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Styles\PasswordBoxTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\UserControls\ListViewItemChiTietHD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\UserControls\ListViewItemUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\UserControls\lvi_DSKhachHang.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabBaoCaoCongNo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabBaoCaoTonKho.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabCapNhatTaiKhoan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabKhachHang.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabPhieuNhapSach.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabPhieuThuTien.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabQuanLyHoaDonCu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabQuanLyPhieuNhap.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabQuanLySach.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabQuanLyTaiKhoan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabQuyDinh.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabTacGia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabTaoTaiKhoanMoi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabTheLoai.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabThemHoaDonMoi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabTraCuuKhachHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabTraCuuSach.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\UserControls\tabTraCuuTaiKhoan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\Windows\About.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\Windows\Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Styles\ListBoxTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Styles\ButtonTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\Windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Assets\Scripts\EventDoubleClick.cs" />
+    <Compile Include="Assets\Scripts\WindowDragger.cs" />
+    <Compile Include="Assets\Scripts\WindowsResizer.cs" />
+    <Compile Include="Assets\Scripts\WpfScreen.cs" />
+    <Compile Include="Views\Views\Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\Styles\TextBoxTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Views\Windows\TitleMainRightClick.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\Windows\ToolBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Views\Windows\WarningBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Managers\ConfigManager.cs" />
+    <Compile Include="Managers\~Manager.cs" />
+    <Compile Include="Managers\ErrorManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Images\background.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\About-64.png" />
+    <Resource Include="Assets\Images\Book-64.png" />
+    <Resource Include="Assets\Images\Business Contact-64.png" />
+    <Resource Include="Assets\Images\Calendar-64.png" />
+    <Resource Include="Assets\Images\Combo Chart-64.png" />
+    <Resource Include="Assets\Images\Contacts-64.png" />
+    <Resource Include="Assets\Images\Literature Filled-100.png" />
+    <Resource Include="Assets\Images\Maximize.png" />
+    <Resource Include="Assets\Images\maximize_black.png" />
+    <Resource Include="Assets\Images\Menu-64.png" />
+    <Resource Include="Assets\Images\Minimize.png" />
+    <Resource Include="Assets\Images\minimize_black.png" />
+    <Resource Include="Assets\Images\Plus Math-64.png" />
+    <Resource Include="Assets\Images\restore.png" />
+    <Resource Include="Assets\Images\Rules-64.png" />
+    <Resource Include="Assets\Images\Settings-64.png" />
+    <Resource Include="Assets\Images\Shutdown-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Error-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\close.png" />
+    <Resource Include="Assets\Images\close_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Calculator-64.png" />
+    <Resource Include="Assets\Images\Maintenance-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Message-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\group_picture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Trash-64.png" />
+    <Resource Include="bookstore.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Checkmark-96.png" />
+    <Resource Include="Assets\Images\Search-64.png" />
+    <Resource Include="Assets\Images\Trash-104.png" />
+    <Resource Include="Assets\Images\Undo-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\resizer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WPF.MDI\WPF.MDI.csproj">
+      <Project>{be1ed569-5e0b-4df0-8964-33ad2aae4c4a}</Project>
+      <Name>WPF.MDI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Buy-64 %28blue%29.png" />
+    <Resource Include="Assets\Images\Buy-64 %28white%29.png" />
+    <Resource Include="Assets\Images\Delete-64 %28blue%29.png" />
+    <Resource Include="Assets\Images\Health Book-64 %28blue%29.png" />
+    <Resource Include="Assets\Images\Minus Math -64 %28blue%29.png" />
+    <Resource Include="Assets\Images\Plus Math-64 %28blue%29.png" />
+    <Resource Include="Assets\Images\Refresh-64 %28blue%29.png" />
+    <Resource Include="Assets\Images\Save-64 %28blue%29.png" />
+    <Resource Include="Assets\Images\Support-64 %28blue%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Views\UserControls\Handlers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Checkmark-64 %28blue%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Bill-64 %28blue%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Bill-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Data Backup-64 %28blue%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Delete Link-64 %28blue%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\password.png" />
+    <Resource Include="Assets\Images\username.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)Data" "$(TargetDir)Data\" /Y /E</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

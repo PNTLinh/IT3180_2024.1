@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="QuanLyNhaSach.Views.Views.UserControls.NumericUpDown"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="80" BorderThickness="1" BorderBrush="Gainsboro">
+    <DockPanel>
+        <Grid Margin="4,0" DockPanel.Dock="Right">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button OpacityMask="#FFC9DFF2" BorderBrush="{x:Null}" Style="{DynamicResource Btn_IconOnly}" Margin="0" Width="16" Height="16">
+                <Image Source="/Tiki Bookshop;component/Assets/Images/Plus Math-64 (blue).png"/>
+            </Button>
+            <Button OpacityMask="#FFC9DFF2" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource Btn_IconOnly}" Background="Black" Margin="0" Grid.Row="1" Width="16" Height="16">
+                <Image Source="/Tiki Bookshop;component/Assets/Images/Minus Math -64 (blue).png"/>
+            </Button>
+        </Grid>
+        <TextBox Margin="4,0" BorderBrush="Black" BorderThickness="0" Background="{x:Null}" TextWrapping="NoWrap" ToolTip="" TextAlignment="Center" Foreground="#FFE8E8E8" VerticalContentAlignment="Center" Padding="4,0"/>
+    </DockPanel>
+</UserControl>
