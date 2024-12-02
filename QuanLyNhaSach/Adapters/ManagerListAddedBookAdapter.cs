@@ -83,8 +83,8 @@ namespace Adapters
                         var id = reader.GetInt32(0);
                         var item = new ManagerListAddedBook(id);
                         item.BeginInit();
-                        item.DateCreated = reader.GetDateTime(1);
-                        item.DateAddIntoStorage = reader.GetDateTime(2);
+                        item.DateAddIntoStorage = reader.GetDateTime(1);
+                        item.DateCreated = reader.GetDateTime(2);
                         item.IDManager = (int)reader.GetValueDefault(3, 0);
                         item.EndInit();
                         result.Add(item);
