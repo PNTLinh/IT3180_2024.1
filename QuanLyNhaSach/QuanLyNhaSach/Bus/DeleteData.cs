@@ -1,4 +1,4 @@
-﻿using QuanLyNhaSach.Objects;
+using QuanLyNhaSach.Objects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,7 @@ namespace QuanLyNhaSach.Bus
 {
     public class DeleteData
     {
+        //Xoa hoa don cu
         public static void DeleteOldBill(Bill bill)
         {
             if (bill.ID > 0)
@@ -25,6 +26,7 @@ namespace QuanLyNhaSach.Bus
             }
         }
 
+        //Xoa danh sach sach da them
         public static void DeleteManagerListAddedBook(ManagerListAddedBook mlab)
         {
             if (mlab.ListAddedBook.Count <= 0)

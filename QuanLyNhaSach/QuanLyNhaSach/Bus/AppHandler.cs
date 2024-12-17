@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -13,11 +13,13 @@ namespace QuanLyNhaSach.Bus
     public class AppHandler
     {
         #region Application
+        //Tat
         public static void Shutdown(int exitcode = 0)
         {
             Application.Current.Shutdown(exitcode);
         }
 
+        //Khoi dong
         public static void ProcessStart(params string[] processStartParameters)
         {
             if (processStartParameters.Length <= 1)
@@ -43,6 +45,7 @@ namespace QuanLyNhaSach.Bus
             }
         }
 
+        //Khong the mo them
         public static void AppCantOpenMoreTimes()
         {
             var processes = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName);
@@ -50,6 +53,7 @@ namespace QuanLyNhaSach.Bus
                 Managers.ErrorManager.Current.CantOpenAppMoreTimes.Call();
         }
 
+        //Cap nhat tu dong
         public static void SetupAutoUpdaters()
         {
             //update: bills
@@ -86,18 +90,20 @@ namespace QuanLyNhaSach.Bus
         #endregion
 
         #region Window
+        //Dong cua so ao
         public static void VirtualWindowClose(Window window)
         {
             if (window.Visibility != Visibility.Hidden)
                 window.Visibility = Visibility.Hidden;
         }
 
+        //Mo cua so ao
         public static void VirtualWindowOpen(Window window)
         {
             if (window.Visibility != Visibility.Visible)
                 window.Visibility = Visibility.Visible;
         }
-
+        //Mo rong cua so
         public static void OpenWindowExt<T>(Window owner, ref T windowVar) where T : Window
         {
             if (windowVar == null)
@@ -111,7 +117,8 @@ namespace QuanLyNhaSach.Bus
         #endregion
 
         #region Tab (Mdi Child)
-        private static int _id = 0;
+        private static int_id = 0;
+        //Mo tab
         public static UserControl OpenTab(MdiContainer container, Type type, string title, bool canDuplicate)
         {
             if (type != null)
@@ -142,6 +149,7 @@ namespace QuanLyNhaSach.Bus
             return null;
         }
 
+        //Chon tab
         public static void SelectTab(MdiContainer container, string title)
         {
             var child = container.Children.FirstOrDefault(x => x.Title == title);

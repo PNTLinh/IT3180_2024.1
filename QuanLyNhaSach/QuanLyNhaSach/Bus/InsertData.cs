@@ -1,4 +1,4 @@
-﻿using QuanLyNhaSach.Adapters;
+using QuanLyNhaSach.Adapters;
 using QuanLyNhaSach.Objects;
 using System;
 using System.Collections.Generic;
@@ -11,12 +11,7 @@ namespace QuanLyNhaSach.Bus
 {
     public class InsertData
     {
-        public static void NewPayDebtMoney(PayDebtMoney pdm)
-        {
-            PayDebtMoneyAdapter.InsertPayDebt(pdm);
-            CustomerAdapter.UpdateDebt(pdm.Customer.ID, pdm.Customer.Debt);
-        }
-
+        //Them hoa don moi
         public static void InsertNewBill(Bill newBill)
         {
             if (newBill.ReturnMoney >= 0)
@@ -41,6 +36,7 @@ namespace QuanLyNhaSach.Bus
             }
         }
 
+        //Them sach moi
         public static void InsertNewBook(Book whichBook)
         {
             if (whichBook.IsCreatedItem)
@@ -77,6 +73,7 @@ namespace QuanLyNhaSach.Bus
             }
         }
 
+        //SSach moi duoc them vao
         public static void InsertNewAddedBook(ManagerListAddedBook mlab)
         {
             Adapters.ManagerListAddedBookAdapter.Insert(mlab);
@@ -99,18 +96,14 @@ namespace QuanLyNhaSach.Bus
             }
         }
 
-        public static void InsertNewDebtorReport(ObservableCollection<Customer> data, int month, int year)
-        {
-            if (Adapters.ReportAdapter.ExistDebtorReport(month, year) == -1)
-                Adapters.ReportAdapter.InsertNewDebtorReport(data, month, year);
-        }
-
+        //Them bao cao so lieu moi
         public static void InsertNewNumberReport(ObservableCollection<Book> data, int month, int year)
         {
             if (Adapters.ReportAdapter.ExistNumberReport(month, year) == -1)
                 Adapters.ReportAdapter.InsertNewNumberReport(data, month, year);
         }
 
+        //Them tai khoan moi
         public static bool InsertNewAccount(Account account)
         {
             if (account.Email != null && account.Name != null)

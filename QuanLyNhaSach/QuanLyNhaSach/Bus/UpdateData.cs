@@ -1,4 +1,4 @@
-﻿using QuanLyNhaSach.Objects;
+using QuanLyNhaSach.Objects;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,6 +10,7 @@ namespace QuanLyNhaSach.Bus
 {
     public class UpdateData
     {
+        //Cap nhat hoa don cu
         public static void UpdateOldBill(Bill bill)
         {
             if (bill.ID > 0)
@@ -47,6 +48,7 @@ namespace QuanLyNhaSach.Bus
             }
         }
 
+        //Cap nhat sach
         public static void UpdateBook(Book whichBook)
         {
             if (whichBook.IsEditedItem)
@@ -80,6 +82,7 @@ namespace QuanLyNhaSach.Bus
             }
         }
 
+        //Cap nhat tai khoan
         public static bool UpdateAccount(Account account)
         {
             if (account.IsDeleted == false)
@@ -91,6 +94,7 @@ namespace QuanLyNhaSach.Bus
             return false;
         }
 
+        //Dat lai mat khau
         public static bool ResetPassword(Account account)
         {
             if (account.IsDeleted == false)

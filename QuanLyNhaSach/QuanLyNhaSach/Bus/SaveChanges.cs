@@ -1,4 +1,4 @@
-﻿using QuanLyNhaSach.Adapters;
+using QuanLyNhaSach.Adapters;
 using QuanLyNhaSach.Objects;
 using System;
 using System.Collections.Generic;
@@ -11,6 +11,7 @@ namespace QuanLyNhaSach.Bus
 {
     public class SaveChanges
     {
+        //Luu cac qui dinh moi
         public static void SaveNewRules(Rule item)
         {
             if (item == null)
@@ -20,6 +21,7 @@ namespace QuanLyNhaSach.Bus
             RuleAdapter.InsertNewRule(item);
         }
 
+        //Luu cac thay doi ve sach
         public static void SaveChangesBooks(ObservableCollection<Book> books)
         {
             foreach (var item in books)
@@ -46,7 +48,8 @@ namespace QuanLyNhaSach.Bus
             }
         }
 
-        public static void SaveChangesGenres(ObservableCollection<Genre> genres)
+        //Luu cac thay doi ve the loai
+        ublic static void SaveChangesGenres(ObservableCollection<Genre> genres)
         {
             foreach (var item in genres)
             {
@@ -96,6 +99,7 @@ namespace QuanLyNhaSach.Bus
             }
         }
 
+        //Luu cac thay doi ve tac gia
         public static void SaveChangesAuthors(ObservableCollection<Author> authors)
         {
             foreach (var item in authors)
@@ -146,6 +150,7 @@ namespace QuanLyNhaSach.Bus
             }
         }
 
+        //Luu cac thay doi ve khach hang
         public static void SaveChangesCustomers(ObservableCollection<Customer> listcustomer)
         {
             foreach (var item in listcustomer)
@@ -172,6 +177,7 @@ namespace QuanLyNhaSach.Bus
             }
         }
 
+        //Luu cac thay doi ve danh sach sach duoc them vao
         public static void SaveChangesListAddedBook(ManagerListAddedBook SelectedMLAB)
         {
             foreach (var item in SelectedMLAB.ListAddedBook)
@@ -184,6 +190,7 @@ namespace QuanLyNhaSach.Bus
             
         }
 
+        //Luu cac thay doi ve danh sach sach duoc them vao cua quan li
         public static void SaveChangeManagerListAddedBook(ManagerListAddedBook mlab)
         {
             Adapters.ManagerListAddedBookAdapter.Update(mlab);
